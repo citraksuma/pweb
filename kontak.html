@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Menentukan bahasa dokumen sebagai Bahasa Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Mengatur karakter set ke UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mengatur viewport untuk responsivitas -->
+    <title>Kontak - Tailor Citra Busana</title> <!-- Judul halaman -->
+    <link rel="icon" href="image/logo.png"> <!-- Mengatur ikon halaman -->
+    <style>
+        * {
+            margin: 0; /* Menghilangkan margin default pada semua elemen */
+            padding: 0; /* Menghilangkan padding default pada semua elemen */
+            box-sizing: border-box; /* Mengatur box-sizing untuk menghitung padding dan border dalam lebar dan tinggi elemen */
+            font-family: 'Arial', sans-serif; /* Mengatur font untuk seluruh halaman */
+        }
+
+        body {
+            background-color: #f5f5f5; /* Mengatur warna latar belakang halaman */
+            color: #333; /* Mengatur warna teks */
+            font-family:'Times New Roman', serif; /* Font yang lebih sesuai dengan tema */
+        }
+
+        /* Header Styles */
+        header {
+            background-image: url('image/jahit.jpg'); /* Ganti dengan path gambar header Anda */
+            background-size: cover; /* Mengatur gambar latar belakang agar menutupi seluruh area header */
+            background-position: center; /* Mengatur posisi gambar latar belakang di tengah */
+            height: 300px; /* Atur tinggi header sesuai kebutuhan */
+            position: relative; /* Mengatur posisi relatif untuk header */
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px; /* Mengatur lebar maksimum kontainer */
+            margin: 3rem auto; /* Margin atas dan bawah 3rem, dan margin kiri dan kanan otomatis untuk sentralisasi */
+            padding: 0 20px; /* Padding kiri dan kanan untuk kontainer */
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #fff; /* Warna latar belakang untuk formulir kontak */
+            padding: 2rem; /* Padding untuk formulir kontak */
+            border-radius: 10px; /* Mengatur sudut membulat untuk formulir kontak */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada formulir kontak */
+            margin-bottom: 4rem; /* Jarak bawah untuk formulir kontak */
+        }
+
+        .contact-form h2 {
+            color: #4B0082; /* Mengatur warna teks untuk judul formulir kontak */
+            margin-bottom: 1.5rem; /* Jarak bawah untuk judul formulir kontak */
+            text-align: center; /* Mengatur teks judul agar berada di tengah */
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* Mengatur lebar input dan textarea agar memenuhi kontainer */
+            padding: 1rem; /* Padding untuk input dan textarea */
+            margin-bottom: 1rem; /* Jarak bawah untuk input dan textarea */
+            border: 1px solid #ddd; /* Border untuk input dan textarea */
+            border-radius: 5px; /* Mengatur sudut membulat untuk input dan textarea */
+            font-size: 1rem; /* Ukuran font untuk input dan textarea */
+        }
+
+        .contact-form button {
+            background-color: #4B0082; /* Warna latar belakang untuk tombol kirim */
+            color: white; /* Warna teks untuk tombol kirim */
+            padding: 1rem; /* Padding untuk tombol kirim */
+            border: none; /* Menghilangkan border pada tombol */
+            border-radius: 5px; /* Mengatur sudut membulat untuk tombol */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+            font-size: 1rem; /* Ukuran font untuk tombol kirim */
+            transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+        }
+
+        .contact-form button:hover {
+            background-color: #FFE4B5; /* Mengubah warna latar belakang tombol saat hover */
+        }
+
+        /* Testimonial Styles */
+        .testimonials {
+            margin-top:  4rem; /* Jarak atas untuk bagian testimoni */
+        }
+
+        .testimonial {
+            background-color: #FFE4B5; /* Warna latar belakang untuk setiap testimoni */
+            padding: 1.5rem; /* Padding untuk testimoni */
+            border-radius: 10px; /* Mengatur sudut membulat untuk testimoni */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada testimoni */
+            margin-bottom: 1.5rem; /* Jarak bawah untuk setiap testimoni */
+        }
+
+        .testimonial h3 {
+            color: #000000; /* Mengatur warna teks untuk nama pelanggan */
+            margin-bottom: 0.5rem; /* Jarak bawah untuk nama pelanggan */
+        }
+
+        .testimonial p {
+            color: #666; /* Mengatur warna teks untuk isi testimoni */
+            line-height: 1.5; /* Mengatur jarak antar baris untuk keterbacaan yang lebih baik */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-form h2 {
+                font-size: 1.8rem; /* Mengatur ukuran font untuk judul formulir kontak pada layar kecil */
+            }
+        }
+
+        .back-button {
+            position: absolute; /* Mengatur posisi tombol kembali */
+            top: 10px; /* Jarak dari atas */
+            background-color: #ad09c2; /* Warna latar belakang untuk tombol kembali */
+            color: #FFF; /* Warna teks untuk tombol kembali */
+            border: none; /* Menghilangkan border pada tombol */
+            padding: 10px 15px; /* Padding untuk tombol kembali */
+            font-size: 16px; /* Ukuran font untuk tombol kembali */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+            border-radius: 5px; /* Mengatur sudut membulat untuk tombol */
+            display: inline-flex; /* Untuk menampilkan ikon dan teks secara sejajar */
+            align-items: center; /* Menyelaraskan item di tengah */
+        }
+
+        .back-button.left {
+            left: 10px; /* Jarak dari kiri untuk tombol kiri */
+        }
+
+        .back-button.right {
+            right: 10px; /* Jarak dari kanan untuk tombol kanan */
+        }
+
+        .back-button:hover {
+            background-color: #ffbc49; /* Warna saat hover pada tombol kembali */
+        }
+
+        .back-button i {
+            margin-right: 5px; /* Jarak antara ikon dan teks pada tombol kembali */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="back-button left" onclick="goBack()"> <!-- Tombol untuk kembali ke halaman sebelumnya di kiri -->
+            <i>&larr;</i> <!-- Ikon panah kiri untuk menunjukkan fungsi kembali -->
+        </button>
+        <button class="back-button right" onclick="goForward()"> <!-- Tombol untuk maju ke halaman berikutnya di kanan -->
+            <i>&rarr;</i> <!-- Ikon panah kanan untuk menunjukkan fungsi maju -->
+        </button>
+    
+        <script>
+            function goBack() {
+                window.location.href='layanan.html' // Mengembalikan pengguna ke halaman sebelumnya
+            }
+
+            function goForward() {
+            window.location.href = 'profile.html'; //halaman berikutnnya
+        }
+        </script>
+    </header>
+
+    <main class="container">
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Hubungi Kami</h2> <!-- Judul untuk formulir kontak -->
+            <form action="your-form-handler.php" method="POST"> <!-- Ganti dengan URL pengolah formulir Anda -->
+                <input type="text" name="name" placeholder="Nama Anda" required> <!-- Input untuk nama -->
+                <input type="email" name="email" placeholder="Email Anda" required> <!-- Input untuk email -->
+                <textarea name="message" rows="5" placeholder="Pesan Anda" required></textarea> <!-- Textarea untuk pesan -->
+                <button type="submit">Kirim Pesan</button> <!-- Tombol untuk mengirim pesan -->
+            </form>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>Testimoni Pelanggan</h2> <!-- Judul untuk bagian testimoni -->
+            <div class="testimonial"> <!-- Testimoni pertama -->
+                <h3>Ani S.</h3> <!-- Nama pelanggan -->
+                <p>"Saya sangat puas dengan hasil jahitan dari Tailor Citra Busana. Kualitasnya luar biasa dan pelayanan sangat ramah!"</p> <!-- Isi testimoni -->
+            </div>
+            <div class="testimonial"> <!-- Testimoni kedua -->
+                <h3>Budi T.</h3> <!-- Nama pelanggan -->
+                <p>"Jas yang saya pesan sangat pas dan sesuai dengan keinginan saya. Terima kasih Tailor Citra Busana!"</p> <!-- Isi testimoni -->
+            </div>
+            <div class="testimonial"> <!-- Testimoni ketiga -->
+                <h3>Rina M.</h3> <!-- Nama pelanggan -->
+                <p>"Pelayanan yang cepat dan hasil jahitan yang memuaskan. Saya pasti akan kembali lagi!"</p> <!-- Isi testimoni -->
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

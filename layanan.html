@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Menentukan bahasa dokumen sebagai Bahasa Indonesia -->
+<head>
+    <meta charset="UTF-8"> <!-- Mengatur karakter set ke UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mengatur viewport untuk responsivitas -->
+    <title>Layanan - Tailor Citra Busana</title> <!-- Judul halaman -->
+    <link rel="icon" href="image/logo.png"> <!-- Mengatur ikon halaman -->
+    <style>
+        * {
+            margin: 0; /* Menghilangkan margin default pada semua elemen */
+            padding: 0; /* Menghilangkan padding default pada semua elemen */
+            box-sizing: border-box; /* Mengatur box-sizing untuk menghitung padding dan border dalam lebar dan tinggi elemen */
+            font-family: 'Javanese Text', 'Times New Roman', serif; /* Mengatur font untuk seluruh halaman */
+        }
+
+        body {
+            background-color: #f5f5f5; /* Mengatur warna latar belakang halaman */
+            color: #333; /* Mengatur warna teks */
+            line-height: 1.6; /* Mengatur jarak antar baris untuk keterbacaan yang lebih baik */
+            margin: 0; /* Menghilangkan margin default */
+            padding: 0; /* Menghilangkan padding default */
+        }
+
+        /* Header Styles */
+        header {
+            background-image: url('image/logo.png'); /* Ganti dengan path gambar header Anda */
+            background-size: cover; /* Mengatur gambar latar belakang agar menutupi seluruh area header */
+            background-position: center; /* Mengatur posisi gambar latar belakang di tengah */
+            background: #D8D2C2; /* Warna latar belakang header */
+            color: #000000; /* Warna teks header */
+            padding: 10px 0; /* Padding atas dan bawah untuk header */
+            display: flex; /* Menggunakan flexbox untuk tata letak header */
+            justify-content: space-between; /* Mengatur elemen di dalam header agar terpisah secara merata */
+            align-items: center; /* Mengatur elemen agar sejajar secara vertikal di tengah */
+        }
+
+        /* Main Content Styles */
+        .services-container {
+            max-width: 1200px; /* Mengatur lebar maksimum kontainer layanan */
+            margin: 3rem auto; /* Margin atas dan bawah 3rem, dan margin kiri dan kanan otomatis untuk sentralisasi */
+            padding: 0 20px; /* Padding kiri dan kanan untuk kontainer layanan */
+        }
+
+        .service-category {
+            margin-bottom: 4rem; /* Jarak bawah untuk kategori layanan */
+        }
+
+        .service-category h2 {
+            color: #4B0082; /* Mengatur warna teks untuk judul kategori layanan */
+            margin-bottom: 2rem; /* Jarak bawah untuk judul kategori layanan */
+            text-align: center; /* Mengatur teks judul agar berada di tengah */
+            font-size: 2.5rem; /* Ukuran font untuk judul kategori layanan */
+        }
+
+        .services-grid {
+            display: grid; /* Menggunakan grid layout untuk tata letak layanan */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mengatur kolom grid dengan ukuran minimum 300px */
+            gap: 2rem; /* Jarak antar item grid */
+        }
+
+        .service-card {
+            background-color: #fff; /* Warna latar belakang untuk kartu layanan */
+            border-radius: 10px; /* Mengatur sudut membulat untuk kartu layanan */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada kartu layanan */
+            overflow: hidden; /* Menghindari konten meluap dari kartu */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan efek transisi saat hover */
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px); /* Menggeser kartu layanan ke atas saat hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Menambah bayangan saat hover */
+        }
+
+        .service-image {
+            width: 100%; /* Mengatur lebar gambar layanan agar memenuhi kartu */
+            height: 400px; /* Mengatur tinggi gambar layanan */
+            object-fit: cover; /* Memastikan gambar tetap proporsional dan menutupi area yang ditentukan */
+        }
+
+        .service-content {
+            padding: 1.5rem; /* Padding untuk konten dalam kartu layanan */
+        }
+
+        .service-content h3 {
+            color: #4B0082; /* Mengatur warna teks untuk judul layanan */
+            margin-bottom: 1rem; /* Jarak bawah untuk judul layanan */
+            font-size: 1.4rem; /* Ukuran font untuk judul layanan */
+        }
+
+        .service-content p {
+            color: #666; /* Mengatur warna teks untuk deskripsi layanan */
+            line-height: 1.6; /* Mengatur jarak antar baris untuk keterbacaan yang lebih baik */
+            margin-bottom: 1rem; /* Jarak bawah untuk deskripsi layanan */
+        }
+
+        .price {
+            color: #4B0082; /* Mengatur warna teks untuk harga layanan */
+            font-weight: bold; /* Mengatur ketebalan font untuk harga */
+            font-size: 1.2rem; /* Ukuran font untuk harga layanan */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-category h2 {
+                font-size: 2rem; /* Mengatur ukuran font untuk judul kategori layanan pada layar kecil */
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr; /* Mengatur grid menjadi satu kolom pada layar kecil */
+            }
+        }
+
+        .logo img {
+            height: 100px; /* Mengatur tinggi gambar logo */
+        }
+
+        header h1 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Menambahkan bayangan pada teks judul */
+            font-family: 'Javanese Text', 'Times New Roman', serif; /* Mengatur font untuk judul */
+            margin: 0; /* Menghilangkan margin default pada judul */
+            flex-grow: 1; /* Mengizinkan judul untuk mengambil ruang yang tersedia */
+            text-align: left; /* Mengatur teks judul agar berada di kiri */
+        }
+
+        header nav ul li {
+            margin: 0 15px; /* Memberikan jarak antar item list di navigasi */
+        }
+
+        header nav ul {
+            list-style: none; /* Menghilangkan bullet pada list */
+            padding: 0; /* Menghilangkan padding default */
+            margin: 0; /* Menghilangkan margin default */
+            display: flex; /* Menggunakan flexbox untuk menata item secara horizontal */
+            justify-content: center; /* Mengatur item agar berada di tengah */
+        }
+
+        header nav ul li a {
+            color: #000000; /* Warna teks link */
+            text-decoration: none; /* Menghilangkan garis bawah pada link */
+            text-transform: capitalize; /* Mengubah semua huruf menjadi kapital */
+            font-size: 20px; /* Mengatur ukuran font link */
+            padding: 5px 7px; /* Memberikan padding pada link untuk area klik yang lebih besar */
+            transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+            border-radius: 10px; 
+        }
+
+        header nav ul li a:hover {
+            background-color: #555; /* Mengubah latar belakang saat hover */
+            color: #fff; /* Mengubah warna teks saat hover */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="image/logo.png" alt="Logo Taylor Citra Busana"></a> <!-- Gambar logo dengan tautan ke halaman utama -->
+        </div>
+        <h1>Taylor Citra Busana</h1> <!-- Judul utama website -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li> <!-- Link ke halaman utama -->
+                <li><a href="tentangkami.html">Tentang Kami</a></li> <!-- Link ke halaman Tentang Kami -->
+                <li><a href="layanan.html">Layanan</a></li> <!-- Link ke halaman Layanan -->
+                <li><a href="kontak.html">Kontak</a></li> <!-- Link ke halaman Kontak -->
+                <li><a href="profile.html">profil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="services-container">
+        <section class="service-category">
+            <h2>Jasa Jahitan Pakaian</h2> <!-- Judul kategori layanan -->
+            <div class="services-grid"> <!-- Kontainer untuk grid layanan -->
+                <div class="service-card"> <!-- Kartu layanan pertama -->
+                    <img src="image/baju1.jpeg" alt="Kemeja" class="service-image"> <!-- Gambar layanan -->
+                    <div class="service-content"> <!-- Konten dalam kartu layanan -->
+                        <h3>Kemeja Custom</h3> <!-- Judul layanan -->
+                        <p>Kemeja dengan desain dan ukuran yang disesuaikan dengan kebutuhan Anda. Dibuat dengan bahan berkualitas tinggi dan perhatian detail yang sempurna.</p> <!-- Deskripsi layanan -->
+                        <p class="price">Mulai dari Rp 100.000</p> <!-- Penutupan tag <p> untuk harga layanan -->
+                    </div> <!-- Penutupan tag <div> untuk konten layanan -->
+                </div> <!-- Penutupan tag <div> untuk kartu layanan pertama -->
+
+                <div class="service-card"> <!-- Kartu layanan kedua -->
+                    <img src="image/gamisungu.jpeg" alt="Gamis" class="service-image"> <!-- Gambar layanan -->
+                    <div class="service-content"> <!-- Konten dalam kartu layanan -->
+                        <h3>Gamis Custom</h3> <!-- Judul layanan -->
+                        <p>Gamis dengan potongan presisi dan kualitas premium. Cocok untuk berbagai acara resmi dan profesional.</p> <!-- Deskripsi layanan -->
+                        <p class="price">Mulai dari Rp 50.000</p> <!-- Penutupan tag <p> untuk harga layanan -->
+                    </div> <!-- Penutupan tag <div> untuk konten layanan -->
+                </div> <!-- Penutupan tag <div> untuk kartu layanan kedua -->
+
+                <div class="service-card"> <!-- Kartu layanan ketiga -->
+                    <img src="image/kebaya.jpeg" alt="Kebaya" class="service-image"> <!-- Gambar layanan -->
+                    <div class="service-content"> <!-- Konten dalam kartu layanan -->
+                        <h3>Kebaya</h3> <!-- Judul layanan -->
+                        <p>Kebaya tinggi dengan detail sempurna. Dibuat untuk memberikan kesan elegan dan profesional dalam setiap kesempatan.</p> <!-- Deskripsi layanan -->
+                        <p class="price">Mulai dari Rp 75.000</p> <!-- Penutupan tag <p> untuk harga layanan -->
+                    </div> <!-- Penutupan tag <div> untuk konten layanan -->
+                </div> <!-- Penutupan tag <div> untuk kartu layanan ketiga -->
+            </div> <!-- Penutupan tag <div> untuk services-grid -->
+        </section> <!-- Penutupan tag <section> untuk service-category -->
+    </main> <!-- Penutupan tag <main> untuk konten utama -->
+
+</body>
+</html>

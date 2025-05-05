@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Tailor Citra Busana</title>
+    <link rel="icon"  a href="image/logo.png">
+    <style>
+body {
+    font-family:'Times New Roman', serif; /* Font yang lebih sesuai dengan tema*/
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.logo img {
+    height: 100px; 
+    margin-right: 12px;
+}
+
+header {
+    background: #D8D2C2; /* Warna latar belakang header */
+    color: #000000; /* Warna teks header */
+    padding: 5px 0; /* Padding atas dan bawah untuk header */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Mengatur elemen di dalam header agar terpisah secara merata */
+    align-items: right; /* Mengatur elemen agar sejajar secara vertikal di tengah */
+    align-items: center;
+}
+
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Bayangan teks untuk kontras */
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+}
+@media screen and (min-width: 600px) {
+    .about-info {
+        flex-direction: row; /* Mengubah arah menjadi baris untuk layar lebih besar */
+        justify-content:center; /* Memusatkan konten secara horizontal */
+    }
+
+}
+
+
+
+header nav ul li {
+    margin: 0 15px; /* Memberikan jarak antar item list */
+}
+
+header nav ul {
+    list-style: none; /* Menghilangkan bullet pada list */
+    padding: 0; /* Menghilangkan padding default */
+    margin: 0; /* Menghilangkan margin default */
+    display: flex; /* Menggunakan flexbox untuk menata item secara horizontal */
+    justify-content: center; /* Mengatur item agar berada di tengah */
+}
+
+header nav ul li a {
+    color: #000000; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    text-transform: capitalize; /* Mengubah semua huruf menjadi kapital */
+    font-size: 20px; /* Mengatur ukuran font link */
+    padding: 5px 7px; /* Memberikan padding pada link untuk area klik yang lebih besar */
+    transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+    border-radius: 10px; 
+}
+
+header nav ul li a:hover {
+    background-color: #333; /* Mengubah latar belakang saat hover */
+    color: #fff; /* Mengubah warna teks saat hover */
+    
+}
+
+nav ul li a {
+    color: #FFE4B5; /* Warna moccasin untuk link navigasi */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #DAA520; /* Warna goldenrod saat hover */
+}
+
+/* Warna untuk judul section */
+main section h2 {
+    color: #800000; /* Warna marun */
+    border-bottom: 2px solid #8B4513; /* Garis bawah coklat */
+}
+
+main section {
+    background-color: #FFF8DC; /* Warna cornsilk, krem lembut */
+}
+
+footer {
+    background-image: url('image/ukur.jpeg'); /* Ganti dengan path gambar batik Anda */
+    background-size: cover;
+    background-position: center;
+    color: #FFF; /* Warna teks putih */
+    padding: 10px 0; /* Padding atas dan bawah */
+    text-align: center; /* Teks rata tengah */
+    position: relative;
+}
+
+/* Overlay gelap untuk meningkatkan keterbacaan teks */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay hitam dengan opasitas 60% */
+}
+
+.footer-content, .footer-links, .footer-bottom {
+    position: relative; /* Agar konten berada di atas overlay */
+    z-index: 1;
+}
+
+.footer-content, .footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-content h2, .footer-links h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFD700; /* Warna emas untuk judul */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFD700; /* Warna emas saat hover */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="image/logo.png" alt="Logo Taylor Citra Busana"></a>
+        </div>
+        <h1>Taylor Citra Busana</h1> <!-- Judul utama website -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li> <!-- Link ke bagian Tentang Kami -->
+                <li><a href="layanan.html">Layanan</a></li> <!-- Link ke bagian Layanan -->
+                <li><a href="kontak.html">Kontak</a></li> <!-- Link ke bagian Kontak -->
+                <li><a href="profile.html">profil</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section>
+            <h2>Sejarah Tailor Citra Busana</h2>
+            <p>Tailor Citra Busana adalah usaha jahit yang berdiri sejak tahun 1984. Usaha ini memiliki sejarah panjang dan kaya akan pengalaman dalam dunia busana.</p>
+        </section>
+
+        <section>
+            <h2>Pendiri</h2>
+            <p>Dahulunya, Tailor Citra Busana ditokohkan oleh sepasang suami istri yang berdedikasi:</p>
+            <ul>
+                <li>Bapak Sukamdi</li>
+                <li>Ibu Susiati</li>
+            </ul>
+            <p>Mereka bersama-sama membangun dan mengembangkan usaha ini dengan penuh semangat dan keahlian.</p>
+        </section>
+
+        <section>
+            <h2>Spesialisasi Kami</h2>
+            <p>Setelah Bapak Sukamdi meninggal dunia, Tailor Citra Busana mengalami perubahan fokus. Saat ini, kami khusus melayani jahit pakaian wanita saja. Kami berkomitmen untuk memberikan layanan terbaik dalam pembuatan busana wanita dengan kualitas tinggi dan desain yang elegan.</p>
+        </section>
+
+        <section>
+            <h2>Komitmen Kami</h2>
+            <p>Dengan pengalaman lebih dari 39 tahun di industri busana, Tailor Citra Busana terus berkomitmen untuk memberikan layanan jahit terbaik. Kami menggabungkan keahlian tradisional dengan sentuhan modern untuk menciptakan pakaian yang sempurna bagi setiap pelanggan kami.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Kontak Kami</h2>
+            <p>Melayani : Gamis, Kebaya, Abaya, Busana Muslim, Seragam Sekolah Wanita.</p>
+            <p>Telepon: +62 858-5992-2393</p>
+            <p>Alamat : Dusun Sukosewu, Desa Sukosewu RT 02 RW 02, Kecamatan Gandusari, Kabupaten Blitar, Provinsi Jawa Timur</p>
+            <p>BUKA SETIAP HARI SENIN-JUM'AT</p>
+        </div>
+        
+    </footer>
+</body>
+</html>
