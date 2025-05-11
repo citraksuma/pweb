@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Tailor Citra Busana</title>
+    <title>Tailor Citra Busana</title>
     <link rel="icon"  a href="image/logo.png">
     <style>
 body {
-    font-family:'Times New Roman', serif; /* Font yang lebih sesuai dengan tema*/
-    margin: 0; /* Menghilangkan margin default */
-    padding: 0; /* Menghilangkan padding default */
-}
+        font-family:'Times New Roman', serif; 
+        margin: 0; 
+        padding: 0; 
+    }
+    header {
+        background: #D8D2C2; 
+        color: #000000; 
+        padding: 5px 0; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: right; 
+        align-items: center;
+    }
 
-.logo img {
-    height: 100px; 
-    margin-right: 12px;
-}
+    .logo img {
+        height: 100px; 
+        margin-right: 20px
+    }
 
-header {
-    background: #D8D2C2; /* Warna latar belakang header */
-    color: #000000; /* Warna teks header */
-    padding: 5px 0; /* Padding atas dan bawah untuk header */
-    display: flex; /* Menggunakan flexbox untuk tata letak */
-    justify-content: space-between; /* Mengatur elemen di dalam header agar terpisah secara merata */
-    align-items: right; /* Mengatur elemen agar sejajar secara vertikal di tengah */
-    align-items: center;
-}
-
-header h1 {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Bayangan teks untuk kontras */
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
-}
+    header h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        margin: 0; 
+        flex-grow: 1; 
+        text-align: left; 
+    }
 @media screen and (min-width: 600px) {
     .about-info {
         flex-direction: row; /* Mengubah arah menjadi baris untuk layar lebih besar */
@@ -55,15 +54,16 @@ header nav ul {
     justify-content: center; /* Mengatur item agar berada di tengah */
 }
 
+
 header nav ul li a {
-    color: #000000; /* Warna teks link */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    text-transform: capitalize; /* Mengubah semua huruf menjadi kapital */
-    font-size: 20px; /* Mengatur ukuran font link */
-    padding: 5px 7px; /* Memberikan padding pada link untuk area klik yang lebih besar */
-    transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
-    border-radius: 10px; 
-}
+        color: #000000; /* Warna teks link */
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
+        text-transform: capitalize; /* Mengubah semua huruf menjadi kapital */
+        font-size: 20px; /* Mengatur ukuran font link */
+        padding: 5px 7px; /* Memberikan padding pada link untuk area klik yang lebih besar */
+        transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+        border-radius: 10px; 
+    }
 
 header nav ul li a:hover {
     background-color: #333; /* Mengubah latar belakang saat hover */
@@ -91,67 +91,56 @@ main section {
 }
 
 footer {
-    background-image: url('image/ukur.jpeg'); /* Ganti dengan path gambar batik Anda */
+    background-image: url('image/mesin1.jpeg'); /* Ganti dengan path gambar kamu */
     background-size: cover;
     background-position: center;
-    color: #FFF; /* Warna teks putih */
-    padding: 10px 0; /* Padding atas dan bawah */
-    text-align: center; /* Teks rata tengah */
-    position: relative;
-}
+    background-repeat: no-repeat;
+    color: rgb(15, 0, 0);
+    padding: 40px 20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
 
-/* Overlay gelap untuk meningkatkan keterbacaan teks */
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Overlay hitam dengan opasitas 60% */
-}
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(189, 167, 116, 0.85); /* Semi-transparan untuk kontras teks */
+    padding: 30px;
+    border-radius: 10px;
+  }
 
-.footer-content, .footer-links, .footer-bottom {
-    position: relative; /* Agar konten berada di atas overlay */
-    z-index: 1;
-}
-
-.footer-content, .footer-links {
+  .footer-left h2 {
+    font-size: 24px;
     margin-bottom: 20px;
-}
+  }
 
-.footer-content h2, .footer-links h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #FFD700; /* Warna emas untuk judul */
-}
-
-.footer-links ul {
+  .footer-links ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-}
+    margin: 0 0 20px 0;
+    gap: 5px;
+  }
 
-.footer-links ul li {
-    margin: 5px 0;
-}
-
-.footer-links a {
-    color: #FFF;
+  .footer-links ul li a {
+    color: rgb(13, 13, 13);
     text-decoration: none;
-    transition: color 0.3s ease;
-}
+    font-size: 14px;
+  }
 
-.footer-links a:hover {
-    color: #FFD700; /* Warna emas saat hover */
-}
+  .social-icons {
+    margin-top: 10px;
+  }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 10px;
-    font-size: 0.9em;
-}
+  .social-icons a {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
     </style>
 </head>
 <body>
@@ -159,14 +148,15 @@ footer::before {
         <div class="logo">
             <a href="home.html"><img src="image/logo.png" alt="Logo Taylor Citra Busana"></a>
         </div>
-        <h1>Taylor Citra Busana</h1> <!-- Judul utama website -->
+        <h1>Tailor Citra Busana</h1> 
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="tentangkami.html">Tentang Kami</a></li> <!-- Link ke bagian Tentang Kami -->
-                <li><a href="layanan.html">Layanan</a></li> <!-- Link ke bagian Layanan -->
-                <li><a href="kontak.html">Kontak</a></li> <!-- Link ke bagian Kontak -->
-                <li><a href="profile.html">profil</a></li>
+                <li><a href="profil.html">Profil</a></li> <!-- Link ke bagian Tentang Kami -->
+                <li><a href="produk.html">Produk</a></li> <!-- Link ke bagian Layanan -->
+                <li><a href="layanan booking.html">Layanan booking</a></li> <!-- Link ke bagian Kontak -->
+                <li><a href="ulasan.html">Ulasan</a></li>
+                <li><a href="pengembang.html">Pengembang</a></li>
             </ul>
         </nav>
     </header>
@@ -199,14 +189,26 @@ footer::before {
     </main>
 
     <footer>
-        <div class="footer-content">
-            <h2>Kontak Kami</h2>
-            <p>Melayani : Gamis, Kebaya, Abaya, Busana Muslim, Seragam Sekolah Wanita.</p>
-            <p>Telepon: +62 858-5992-2393</p>
-            <p>Alamat : Dusun Sukosewu, Desa Sukosewu RT 02 RW 02, Kecamatan Gandusari, Kabupaten Blitar, Provinsi Jawa Timur</p>
-            <p>BUKA SETIAP HARI SENIN-JUM'AT</p>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h2>Melayani :</h2>
+            <div class="footer-links">
+              <ul>
+                <li><a href="#">Jahit Seragam</a></li>
+                <li><a href="#">Jahit Gamis</a></li>
+                <li><a href="#">Jahit Baju Koko</a></li>
+                <li><a href="#">Jahit Rok</a></li>
+                <li><a href="#">Jahit Kebaya</a></li>
+                <li><a href="#">Permak</a></li>
+              </ul>
+            </div>
+            <div class="social-icons">
+              <a href="https://web.whatsapp.com/"><img src="image/wa (3).png" alt="whatsapp"></a>
+              <a href="#"><img src="image/gmail.png" alt="email"></a>
+              <a href="#"><img src="image/loc.png" alt="alamat"></a>
+            </div>
+          </div>
         </div>
-        
-    </footer>
+      </footer>
 </body>
 </html>
